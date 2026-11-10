@@ -31,7 +31,7 @@ body {
 .intro { text-align: center; }
 .page-title {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 8px;
   margin: 0;
@@ -48,14 +48,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: clamp(31px, 4.2vw, 43px);
-  letter-spacing: -1.5px;
 }
-.blue-word { color: var(--blue); }
+.client-word { font-size: 35px;
+}
+.blue-word {
+  background: linear-gradient(90deg, #aa80f9, var(--deep-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+font-size: 45px;
+}
 .intro-copy {
   margin: 18px 0 0;
   color: #393337;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -177,7 +183,7 @@ body {
   flex: 0 0 auto;
   padding-right: 13px;
   border-right: 1px solid #e6a0ae;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.15;
 }
@@ -185,7 +191,7 @@ body {
 .contact-details { flex: 1; min-width: 0; }
 .contact-details p {
   margin: 3px 0;
-  font-size: 8px;
+  font-size: 10px;
   white-space: nowrap;
 }
 .contact-details i {
@@ -219,6 +225,10 @@ body {
 
 @media (max-width: 640px) {
   .page { width: min(100% - 30px, 500px); padding-top: 42px; }
+  .client-word { font-size: 30px;}
+  .blue-word {font-size: 40px;}
+  .intro-copy { font-size: 11px;}
+
   .reviews { gap: 54px; margin: 65px 0 65px; }
   .review-card,
   .review-card--second {
