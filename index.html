@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Customer testimonials and client reviews.">
+  <title>Client Reviews</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <h1 class="page-title"><span class="title-initial">R</span><span class="title-words"><span>Client</span><span class="pink-word">Reviews</span></span></h1>
+      <p class="intro-copy">A few kind words from people we've had the pleasure<br class="desktop-break"> of working with.</p>
+    </header>
+
+    <section class="reviews" aria-label="Customer testimonials">
+      <article class="review-card review-card--first">
+        <div class="avatar" aria-label="Customer profile placeholder" role="img">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="22" r="12"/>
+            <path d="M10 57c1-13 10-20 22-20s21 7 22 20"/>
+          </svg>
+        </div>
+        <div class="review-copy">
+          <h2>username</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <button class="heart-button" type="button" aria-label="Save this review" aria-pressed="false"><span aria-hidden="true">♥</span></button>
+        <div class="rating" aria-label="Rated 5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      </article>
+
+      <article class="review-card review-card--second">
+        <div class="avatar" aria-label="Customer profile placeholder" role="img">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="22" r="12"/>
+            <path d="M10 57c1-13 10-20 22-20s21 7 22 20"/>
+          </svg>
+        </div>
+        <div class="review-copy">
+          <h2>username</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <button class="heart-button" type="button" aria-label="Save this review" aria-pressed="false"><span aria-hidden="true">♥</span></button>
+        <div class="rating" aria-label="Rated 5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      </article>
+    </section>
+
+    <footer class="contact-row">
+      <div class="contact-heading">Contact<br>us <span>now</span></div>
+      <div class="contact-details">
+        <p><strong>Email :</strong> example@gmail.com</p>
+        <p><strong>Phone :</strong> +91 XXX XXX XXXX <i></i> <strong>Address :</strong> example address</p>
+      </div>
+      <a class="quote-button" href="mailto:hello@example.com?subject=Get%20a%20quote">Get Quote</a>
+    </footer>
+    <p class="saved-message" aria-live="polite"></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

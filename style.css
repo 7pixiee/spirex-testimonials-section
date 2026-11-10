@@ -1,0 +1,252 @@
+:root {
+  --blue: #788ded;
+  --deep-blue: #5c89e9;
+  --soft-blue: #dae6f8;
+  --ink: #262326;
+  --muted: #56575e;
+  --paper: #fbfafb;
+  --purple: #834ff3;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+.page {
+  width: min(100% - 40px, 920px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 48px 0 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro { text-align: center; }
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  line-height: .88;
+}
+.title-initial {
+  color: var(--deep-blue);
+  font-size: clamp(88px, 12vw, 112px);
+  font-weight: 500;
+}
+.title-words {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: clamp(31px, 4.2vw, 43px);
+  letter-spacing: -1.5px;
+}
+.blue-word { color: var(--blue); }
+.intro-copy {
+  margin: 18px 0 0;
+  color: #393337;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.reviews {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+  margin: 82px 0 76px;
+}
+.review-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: min(100%, 610px);
+  min-height: 118px;
+  padding: 17px 34px 17px 20px;
+  border: 2px solid rgba(255,255,255,.95);
+  border-radius: 100px;
+  background: linear-gradient(110deg, #a8a1f6 0%, #e7daf5 100%);
+  box-shadow: 0 8px 22px rgba(214, 133, 148, .06);
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 28px rgba(214, 112, 139, .16);
+}
+.review-card--first { align-self: flex-start; }
+.review-card--second {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+  padding: 17px 20px 17px 34px;
+  background: linear-gradient(110deg, #8ba6f2 0%, #975ce9 100%);
+  color: #fff;
+}
+.avatar {
+  flex: 0 0 86px;
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 4px solid #333;
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  border-radius: 50%;
+  background: #373737;
+}
+.avatar svg { width: 62px; fill: #777; }
+.review-copy {
+  flex: 1;
+  min-width: 0;
+  padding: 0 22px 0 24px;
+}
+.review-copy h2 {
+  margin: 0 0 7px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .3px;
+}
+.review-copy p {
+  margin: 0;
+  color: #292326;
+  font-size: 10px;
+  line-height: 1.85;
+}
+.review-card--second .review-copy { text-align: right; }
+.review-card--second .review-copy p { color: rgba(255,255,255,.95); }
+.heart-button {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: -17px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  background: #1786ed;
+  box-shadow: 0 4px 10px rgba(220, 23, 70, .15);
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease;
+}
+.heart-button span { font-size: 20px; line-height: 1; }
+.heart-button:hover { transform: translateY(-50%) scale(1.12); }
+.heart-button.is-saved { background: #512ba9; }
+.review-card--second .heart-button { right: auto; left: -17px; }
+.rating {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: -17px;
+  display: flex;
+  gap: 3px;
+  padding: 5px 17px 6px;
+  transform: translateX(-50%);
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 9px 17px rgba(0,0,0,.15);
+  color: var(--purple);
+  font-size: 21px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.contact-row {
+  width: min(100%, 570px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: auto;
+}
+.contact-heading {
+  flex: 0 0 auto;
+  padding-right: 13px;
+  border-right: 1px solid #e6a0ae;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.contact-heading span { color: var(--blue); }
+.contact-details { flex: 1; min-width: 0; }
+.contact-details p {
+  margin: 3px 0;
+  font-size: 8px;
+  white-space: nowrap;
+}
+.contact-details i {
+  display: inline-block;
+  height: 9px;
+  margin: 0 5px -2px;
+  border-left: 1px solid #a69a9e;
+}
+.quote-button {
+  flex: 0 0 auto;
+  padding: 8px 19px;
+  border: 1px solid #9e9ae9;
+  border-radius: 30px;
+  color: #787bd9;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  text-decoration: none;
+  transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+.quote-button:hover {
+  color: #fff;
+  background: var(--blue);
+  transform: translateY(-2px);
+}
+.saved-message {
+  min-height: 16px;
+  margin: 14px 0 0;
+  color: #644db9;
+  font-size: 11px;
+}
+
+@media (max-width: 640px) {
+  .page { width: min(100% - 30px, 500px); padding-top: 42px; }
+  .reviews { gap: 54px; margin: 65px 0 65px; }
+  .review-card,
+  .review-card--second {
+    width: calc(100% - 8px);
+    min-height: 112px;
+    padding: 15px 18px;
+  }
+  .avatar { flex-basis: 68px; width: 68px; height: 68px; }
+  .avatar svg { width: 52px; }
+  .review-copy { padding: 0 13px; }
+  .review-copy h2 { font-size: 13px; }
+  .review-copy p { font-size: 9px; line-height: 1.6; }
+  .rating { font-size: 17px; padding: 4px 13px 5px; }
+  .contact-row { flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .contact-heading { font-size: 12px; }
+  .contact-details { flex: 0 1 auto; }
+  .contact-details p { font-size: 8px; }
+  .quote-button { font-size: 15px; }
+}
+
+@media (max-width: 390px) {
+  .review-card,
+  .review-card--second { padding-left: 13px; padding-right: 13px; }
+  .avatar { flex-basis: 58px; width: 58px; height: 58px; }
+  .avatar svg { width: 45px; }
+  .review-copy { padding: 0 10px; }
+  .review-copy p { font-size: 8px; }
+  .contact-row { flex-direction: column; }
+  .contact-heading { text-align: center; border-right: 0; padding: 0; }
+  .contact-details { text-align: center; }
+}
